@@ -1,0 +1,10 @@
+#main_header {
+    text-align: center;
+    font-size: 75px;
+}
+
+.mars_img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
