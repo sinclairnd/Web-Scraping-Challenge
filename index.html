@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "../static/styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="main_header">Mission to Mars</h1>
+        <!--button type="button" onclick="window.location.href='{{ url_for( 'scrape') }}'">
+            <a></a>"Scrape New Data"
+        </button-->
+    </div>
+    <div id="mars_news">
+        <h2>Latest Mars News</h2>
+        <h3>{{ headline }}</h3>
+        <p>{{ paragraph }}</p>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div id="featured_mars_image">
+                <h2>Featured Mars Image</h2>
+                <img src="{{ featured_url }}" alt="Featured Mars Image">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="mars_facts">
+                <h2>Mars Facts</h2>
+                {{ table|safe }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container" id="mars_hemispheres">
+            <h2>Mars Hemispheres</h2>
+            <div class="row">
+                <div>
+                    <img src="{{ mars1 }}" class="mars_img" alt="{{ title1 }}">
+                    <h3>{{ title1 }}</h3>
+                </div>
+                <div>
+                    <img src="{{ mars2 }}" class="mars_img" alt="{{ title2 }}">
+                    <h3>{{ title2 }}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <img src="{{ mars3 }}" class="mars_img" alt="{{ title3 }}">
+                    <h3>{{ title3 }}</h3>
+                </div>
+                <div>
+                    <img src="{{ mars4 }}" class="mars_img" alt="{{ title4 }}">
+                    <h3>{{ title4 }}</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
